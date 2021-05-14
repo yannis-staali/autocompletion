@@ -4,7 +4,7 @@ if(isset($_GET["id"]))
 {
     $id = $_GET["id"];
 
-    $connexion = new PDO('mysql:host=localhost;dbname=autocompletion;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $connexion = new PDO('mysql:host=localhost;dbname=autocompletion;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     $query = $connexion->prepare("SELECT * FROM authors WHERE id = {$id} ");
     $query->execute();
     $result = $query->fetchAll(PDO::FETCH_OBJ);
@@ -25,7 +25,7 @@ if(isset($_GET["auto"]))
 {
     $a = ucfirst($_GET["auto"]);
 
-    $connexion = new PDO('mysql:host=localhost;dbname=autocompletion;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $connexion = new PDO('mysql:host=localhost;dbname=autocompletion;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     $query = $connexion->prepare("SELECT nom FROM authors WHERE nom LIKE '{$a}%' ");
     $query->execute();
     $result = $query->fetchAll(PDO::FETCH_OBJ);
