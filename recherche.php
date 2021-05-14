@@ -1,35 +1,23 @@
 <?php
-
 if(isset($_GET['search']))
-{
-    
+{  
     $letter = substr($_GET['search'], 0, 1); 
-
-    // var_dump($letter);
-
     $connexion = new PDO('mysql:host=localhost;dbname=autocompletion;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     $query = $connexion->prepare("SELECT nom, id FROM authors WHERE nom LIKE '{$letter}%' ");
     $query->execute();
     $result = $query->fetchAll(PDO::FETCH_OBJ);
-
-    // echo '<pre>';
-    // var_dump($result);
-    // echo '<pre>';
-
-    // $response = json_encode($result);
-    // // echo $response;
-    // echo $response;
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <title>Recherche</title>
 </head>
 <body>
     <header>
@@ -39,8 +27,8 @@ if(isset($_GET['search']))
     <h1>Resultats de recherche</h1>
    <div class="resultat">
         <?php for($i=0; isset($result[$i]); $i++): ?>
-            <div class="each">
-                <a href="element.php?id=<?=$result[$i]->id?>"><?=$result[$i]->nom?></a>
+            <div class="each_resultat">
+                <a class="result_search" href="element.php?id=<?=$result[$i]->id?>"><?=$result[$i]->nom?></a>
                 <!--<?= $result[$i]->nom ?> -->
                 <!-- <?=$result[$i]->id?>  -->
             </div>
@@ -62,16 +50,5 @@ if(isset($_GET['search']))
 </script>
 
 <style>
-#form_search{
-    background-color: antiquewhite;
-}
 
-p:hover{
-    cursor:pointer;
-    background-color: grey;
-}
-p{
-    margin : 0;
-    padding: 0.2rem;
-}
 </style>

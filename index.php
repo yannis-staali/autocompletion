@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+
+    <title>Accueil</title>
 </head>
 <body>
-    <!-- <form id="form_search" action="traitement.php" method="get">
-        <input id="search_input" type="text" name="search">
-        <input id="idInput" type="hidden" name="idSend">
-        <input type="submit" name="submit">
-    </form>
-
-    <div id="barre"></div> -->
-
     <header>
         <?php require_once('header.php');?>
     </header>
@@ -24,18 +20,3 @@
 </html>
 
 
-
-<style>
-#form_search{
-    background-color: antiquewhite;
-}
-
-p:hover{
-    cursor:pointer;
-    background-color: grey;
-}
-p{
-    margin : 0;
-    padding: 0.2rem;
-}
-</style>

@@ -15,7 +15,7 @@ document.getElementById('form_search').addEventListener('submit', function(e) {
     {
         // let xhr = new XMLHttpRequest();
         window.location = "recherche.php?search="+search_input;
-        
+
         // xhr.onload = function() {
             // console.log(this.response);
             // // console.log(search_input);
@@ -62,7 +62,7 @@ document.getElementById('search_input').addEventListener('input', function(e) {
 
             for(let x in responseParse)
             {
-                txt += "<p id='target"+x+"' >"+responseParse[x].nom+"</p>";
+                txt += "<p class='ligne' id='target"+x+"' >"+responseParse[x].nom+"</p>";
             }
             //generation du html
             barre.innerHTML = txt;

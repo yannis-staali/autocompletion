@@ -1,0 +1,90 @@
+html{
+    background-image: url('back.jpg');
+    background-size: cover;
+}
+h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+h3 {
+    font-family: 'Roboto', sans-serif;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+.each{
+    border: solid black 1px;
+    width: 20%;
+    margin: auto;
+    text-align:center;
+}
+p:hover{
+    cursor:pointer;
+    background-color: grey;
+}
+p{
+    margin : 0;
+    padding: 0.2rem;
+}
+#form_search{
+    /* background-color: antiquewhite; */
+    margin-top: 0.5rem;
+    margin: auto;
+    width: 50%;
+}
+
+p:hover{
+    cursor:pointer;
+    background-color: antiquewhite;
+}
+p{
+    margin : 0;
+    padding: 0.2rem;
+}
+.navbar > a{
+    text-decoration: none;
+    color: black;
+    padding: 0.7rem;
+    margin: 1rem;
+    background-color: rgb(195, 112, 225);
+    border-radius: 20px;
+   
+}
+.navbar {
+    margin-bottom: 2rem;
+   
+}
+.navbar > a:hover{
+    background-color: antiquewhite;
+
+}
+.titre_head{
+    text-align: center;
+}
+.each_resultat {
+    margin: auto;
+}
+.resultat {
+    display: flex;
+    flex-direction: column;
+
+}
+.result_search:hover {
+    background-color: antiquewhite;
+}
+.barre {
+    width: 50%;
+    /* background-color: blue; */
+}
+/* .barre {
+    width: 50%;
+} */
+.ligne {
+    width: 50%;
+    margin: auto;
+}
